@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulaire</title>
+</head>
+
+<body>
+	<h1>Formulaire</h1>
+	<form action="#">
+		<fieldset>
+			<legend>&Eacute;tat-civil</legend>
+
+			<label for="gender2">Mme/Mlle</label>
+			<input type="radio" value="f" id="gender2">
+			
+			<label for="gender1">M.</label>
+			<input type="radio" value="m" id="gender1">
+			<br>
+
+			<label for="givenname">Pr&eacute;nom</label>
+			<input type="text" id="givenname" placeholder="Pr&eacute;nom" required>
+
+			<label for="familyname">Nom</label>
+			<input type="text" id="familyname" placeholder="Nom" required>
+			<br>
+
+			<br>
+			<label for="age">&Acirc;ge</label>
+			<input type="number" min="16" max="99" id="age">
+
+			<label for="birthdate">Date de naissance</label>
+			<input type="date" id="birthdate" required>
+			<br>
+			<br>
+
+			<label for="birthplace">Pays de Naissance</label>
+			<select id="birthplace" required>
+				<option value="" selected>France</option>
+				<option value="eu">autre pays de l'UE ou de l'EEE</option>
+				<option value="xx">autre pays</option>
+			</select>
+
+			<label for="citizenship">Nationalit&eacute;</label>
+			<select id="citizenship" required>
+				<option value="" selected>Française</option>
+				<option value="eu">autre pays de l'UE ou de l'EEE</option>
+				<option value="xx">autre pays</option>
+			</select>
+		</fieldset>
+
+		<fieldset>
+			<legend>Contact</legend>
+			<label for="adress">Adresse postale</label>
+			<input type="text" id="adress" required>
+
+			<label for="code">Code postal</label>
+			<input type="tel" id="code" pattern="[0-9]{5}" maxlength="5" required>
+
+			<label for="city">Commune</label>
+			<input type="text" id="city" required>
+			<br>
+
+			<label for="phone">T&eacute;l&eacute;phone</label>
+			<input type="tel" pattern="0[1-9]{9}" id="phone" required>
+			<label for="email">Adresse &eacute;lectronique</label>
+			<input type="email" id="email" required>
+		</fieldset>
+
+		<fieldset>
+			<legend>Renseignements divers</legend>
+
+			<label for="currentjob"></label>
+			<select id="currentjob" required>
+				<option value="" selected disabled hidden>m&eacute;tier exercé</option>
+				<option value="1">m&eacute;tiers de l'agro-alimentaire</option>
+				<option value="2a">artisanat</option>
+				<option value="2b">industrie</option>
+				<option value="2c">b&acirc;timent et TP</option>
+				<option value="3a">commerce et communication</option>
+				<option value="3b">fonction publique</option>
+				<option value="3c">m&eacute;tiers de la sant&eacute;</option>
+				<option value="0">sans-emploi</option>
+			</select>
+
+			<label for="socialsec">Num&eacute;ro de s&eacute;urit&eacute; sociale</label>
+			<input type="tel" pattern="[1-2]{1}[0-9]{12}" maxlength="13" id="socialsec">
+			<br>
+
+			<label for="passnumber">Num&eacute;ro passeport</label>
+			<input type="text" maxlength="9" id="passnumber">
+			<br>
+
+			<label for="passdate">Date d&eacute;livrance passeport</label>
+			<input type="date" id="passdate">
+
+			<label for="passexp">Date validit&eacute; passeport</label>
+			<input type="date" id="passexp">
+		</fieldset>
+
+		<input type="submit" value="Valider et envoyer">
+	</form>
+</body>
+</html>
